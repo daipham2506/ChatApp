@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ChatsFragment"
+    android:orientation="vertical"
+    >
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewHeaderList"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Friends" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:background="@color/colorWhite"
+                    android:id="@+id/recyclerHorizontalAvatar_fragment_chats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                     />
+
+                <TextView
+                    android:fontFamily="@font/quicksand_medium"
+                    android:id="@+id/NoAnyFriends_fragment_chats"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text="You have no any friend. \nPlease add friends for chatting and group chats."
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:id="@+id/loading_avatar_fragment_chats"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:text="Loading..."
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:fontFamily="@font/quicksand_bold"
+                    style="@style/TextViewHeaderList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="Messages" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerMessages_fragment_chats"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never" />
+
+                <TextView
+                    android:fontFamily="@font/quicksand_medium"
+                    android:id="@+id/NoAnyConversations_fragment_chats"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="You have no any conversation now. \nPlease add friends for chatting and group chats." />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:id="@+id/loading_chat_fragment_chats"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:text="Loading..."
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

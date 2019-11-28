@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_photo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image_item_chats"
+            android:src="@drawable/placeholder_user"
+            app:civ_border_color="@color/colorGray"
+            app:civ_border_width="1dp"/>
+
+        <ImageView
+            android:background="@drawable/btn_white_circle"
+            android:visibility="gone"
+            android:id="@+id/item_mess_is_online"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:src="@drawable/ic_online_24dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/show_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/rl_photo"
+        android:layout_marginLeft="5dp"
+        android:text="hello"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:background="@drawable/bg_left"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_mess_is_seen"
+        android:visibility="gone"
+        android:layout_below="@id/show_message"/>
+
+</RelativeLayout>

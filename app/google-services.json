@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "920493735343",
+    "firebase_url": "https://mychatapp-14037.firebaseio.com",
+    "project_id": "mychatapp-14037",
+    "storage_bucket": "mychatapp-14037.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920493735343:android:432334552592d78db9835a",
+        "android_client_info": {
+          "package_name": "com.tandai.mychatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920493735343-6943dcs1us0up8a4nucdbcca3csl78tu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcu_hUtRmTVnaq4ipaNAj0LhRJld0ExZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920493735343-6943dcs1us0up8a4nucdbcca3csl78tu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

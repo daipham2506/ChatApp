@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E9EDED"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/btn_send_message"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="6dp"
+            android:tint="@color/colorAccent"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:src="@drawable/ic_menu_send"
+            android:stateListAnimator="@null" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_send_message"
+            android:background="@drawable/bg_white_rounded">
+
+            <LinearLayout
+                android:id="@+id/lnButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:id="@+id/AttachImage_message"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+
+                    android:layout_marginTop="5dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_action_add_photo_alternate" />
+
+                <ImageView
+                    android:tint="@color/colorAccent"
+                    android:id="@+id/AttachFile_message"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_attach_file_black_24dp" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/check_send_text_message"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:foregroundGravity="center"
+                    android:background="@drawable/btn_accent_circle"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_action_arrow_right_white" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/text_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/lnButtons"
+                android:background="@android:color/transparent"
+                android:hint="Enter your message"
+                android:textColorHint="@color/colorGray"
+                android:inputType="textMultiLine"
+                android:lineSpacingMultiplier="1.5"
+                android:maxLines="6"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/filePicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/lnButtons"
+                android:layout_toRightOf="@id/lnButtons"
+                android:drawablePadding="5dp"
+                android:textStyle="bold"
+                android:text="filename.pdf"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimary"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/back_message"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:paddingTop="12dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="12dp"
+                android:src="@drawable/ic_action_back" />
+
+
+            <RelativeLayout
+                android:layout_marginLeft="15dp"
+                android:id="@+id/wrapperAvatar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/placeholder_user" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/isonline_message"
+                    android:layout_alignBottom="@id/image_message"
+                    android:layout_alignRight="@id/image_message"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/btn_white_circle"
+                    android:src="@drawable/ic_online_24dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/aa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_message"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Tan dai"
+                android:layout_marginStart="15dp" />
+            <TextView
+                android:visibility="gone"
+                android:layout_below="@+id/name_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_online_message"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="Đang hoạt động"
+                android:layout_marginStart="15dp" />
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/colorWhite"
+        android:layout_below="@id/bar_layout2"
+        android:id="@+id/recycler_Messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp"
+        android:overScrollMode="never" />
+
+
+    <TextView
+        android:id="@+id/UserTyping_message"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignTop="@id/rl_bottom"
+        android:layout_marginTop="-25dp"
+        android:background="#fff"
+        android:ellipsize="middle"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:text="Alice is typing..." />
+
+    <TextView
+        android:id="@+id/wait_connect_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Wait for connecting..."
+        android:visibility="gone" />
+</RelativeLayout>

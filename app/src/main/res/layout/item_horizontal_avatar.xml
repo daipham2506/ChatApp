@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@drawable/bg_item_list"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_avatar_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/placeholder_user" />
+
+            <ImageView
+                android:visibility="gone"
+                android:background="@drawable/btn_white_circle"
+                android:id="@+id/item_avatar_isonline"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_online_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_avatar_name"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_below="@id/avatar"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Tan dai" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
